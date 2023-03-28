@@ -1,0 +1,16 @@
+[
+    {
+        "departing": "17:40",
+        "destination": "Oman",
+        "flightNumber": "T5563",
+        "gate": "T10",
+        "status": "Cancelled"
+    },
+    {
+        "departing": "20:45",
+        "destination": "Krakow, Poland",
+        "flightNumber": "FR532",
+        "gate": "K48",
+        "status": "On time"
+    }
+]
