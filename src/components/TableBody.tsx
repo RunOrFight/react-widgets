@@ -1,32 +1,19 @@
-import React, { useEffect, useState } from "react";
-import data from "../../data.json";
-import { Flight } from "../types";
+import React, { FC, useEffect, useState } from "react";
 import TableRow from "./TableRow";
 
 const TIMEOUT = 1000;
 
-const TableBody = () => {
-    const [flights, setFlights] = useState<Flight[]>([]);
+interface TableBodyProps {
+    rows: string[][];
+}
 
-    const getFlights = () =>
-        new Promise<Flight[]>((res) => {
-            setTimeout(() => {
-                res(data);
-            }, TIMEOUT);
-        }).then((data) => {
-            setFlights(data);
-        });
-
-    useEffect(() => {
-        getFlights();
-    }, []);
-
+const TableBody: FC<TableBodyProps> = ({ rows }) => {
     return (
         <tbody>
-            {flights?.map((flight, index) => (
+            {rows?.map((row, index) => (
                 <TableRow
                     key={`row_${index}`}
-                    flight={flight}
+                    row={row}
                 />
             ))}
         </tbody>

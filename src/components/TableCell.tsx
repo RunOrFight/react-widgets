@@ -2,13 +2,13 @@ import React, { FC, useState } from "react";
 import TableLatter from "./TableLatter";
 
 interface TableCellProps {
-    flightValue: string;
+    cell: string;
 }
 
-const TableCell: FC<TableCellProps> = ({ flightValue }) => {
+const TableCell: FC<TableCellProps> = ({ cell }) => {
     return (
         <td className='px-4'>
-            {Array.from(flightValue).map((latter, index) => (
+            {Array.from(cell).map((latter, index) => (
                 <TableLatter
                     key={`latter_${index}`}
                     latter={latter}

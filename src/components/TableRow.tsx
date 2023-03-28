@@ -1,21 +1,18 @@
 import React, { FC } from "react";
-import { Flight } from "../types";
 import TableCell from "./TableCell";
 
 interface TableRowProps {
-    flight: Flight;
+    row: string[];
 }
 
-const TableRow: FC<TableRowProps> = ({ flight }) => {
-    const flightValues = Object.values(flight);
-
+const TableRow: FC<TableRowProps> = ({ row }) => {
     return (
         <tr>
-            <td>✈</td>
-            {flightValues?.map((flightValue, index) => (
+            <td className='text-center'>✈</td>
+            {row?.map((cell, index) => (
                 <TableCell
                     key={`cell_${index}`}
-                    flightValue={flightValue}
+                    cell={cell}
                 />
             ))}
         </tr>

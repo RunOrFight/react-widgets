@@ -1,22 +1,18 @@
-import React from "react";
+import React, { FC } from "react";
 
-const TableHead = () => {
-    const columnsHeads = [
-        "",
-        "time",
-        "destination",
-        "flight",
-        "gate",
-        "remarks"
-    ];
+interface TableHeadProps {
+    cols: string[];
+}
+
+const TableHead: FC<TableHeadProps> = ({ cols }) => {
     return (
         <thead>
             <tr>
-                {columnsHeads.map((columnHead, index) => (
+                {cols.map((col, index) => (
                     <td
-                        key={`columnhead_${index}`}
+                        key={`col_${index}`}
                         className='px-4'>
-                        {columnHead.toUpperCase()}
+                        {col.toUpperCase()}
                     </td>
                 ))}
             </tr>
