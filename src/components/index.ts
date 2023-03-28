@@ -3,3 +3,7 @@ export { default as TableHead } from "./TableHead";
 export { default as TableBody } from "./TableBody";
 export { default as TableCell } from "./TableCell";
 export { default as TableRow } from "./TableRow";
+export { default as DepartureTable } from "./DepartureTable";
+export { default as ArrivalTable } from "./ArrivalTable";
+export { default as Tabbar } from "./Tabbar";
+export { default as Button } from "./Button";

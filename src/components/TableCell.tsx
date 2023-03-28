@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import TableLatter from "./TableLatter";
 
 interface TableCellProps {
@@ -8,7 +8,7 @@ interface TableCellProps {
 const TableCell: FC<TableCellProps> = ({ cell }) => {
     return (
         <td className='px-4'>
-            {Array.from(cell).map((latter, index) => (
+            {Array.from(cell || "").map((latter, index) => (
                 <TableLatter
                     key={`latter_${index}`}
                     latter={latter}

@@ -1,0 +1,4 @@
+{
+    "apiUrl": "https://aerodatabox.p.rapidapi.com/flights/airports/icao",
+    "minskAirportICAO": "UMMS"
+}
