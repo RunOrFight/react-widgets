@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Arrival, Departure, Flights } from "../types";
 import config from "../../config/flight-widget.json";
 import { get12HoursRange } from "../utils";
@@ -29,6 +29,15 @@ export default function (): [Departure[], Arrival[], () => void] {
             })
             .catch((err) => console.error(err));
     };
+
+    useMemo(() => {
+        departures.sort((a, b) => {
+            const _a = new Date(a.movement.scheduledTimeLocal);
+            const _b = new Date(b.movement.scheduledTimeLocal);
+            if (_a > _b) return 1;
+            else return -1;
+        });
+    }, [departures, arrivals]);
 
     return [departures, arrivals, loadFlights];
 }
