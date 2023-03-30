@@ -28,7 +28,7 @@ const FlightWidget = () => {
     }, [timerSeconds, isTimerActive]);
 
     return (
-        <div className='bg-neutral-900 font-mono text-neutral-100 text-xl p-4 flex items-start gap-5 h-full overflow-auto'>
+        <div className='font-mono text-neutral-100 text-xl p-4 flex items-start gap-5 h-full overflow-auto w-full'>
             <div className='w-fit whitespace-nowrap'>
                 <div>Airport: Minsk({config.minskAirportICAO})</div>
                 <div>Date: {new Date(from).toDateString()}</div>
@@ -43,7 +43,7 @@ const FlightWidget = () => {
                 </Button>
             </div>
 
-            <div className='flex w-full justify-center flex-col'>
+            <div className='flex w-full h-full  justify-center flex-col'>
                 <Tabbar
                     activeTab={activeTab}
                     setActiveTab={setActiveTab}

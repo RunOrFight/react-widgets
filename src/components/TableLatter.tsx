@@ -14,7 +14,7 @@ const TableLatter: FC<TableLatterProps> = ({ latter, index }) => {
 
     return (
         <div
-            className={`border-neutral-900 border-2 bg-black float-left ${
+            className={`border-sky-900 border-[3px] float-left ${
                 flip ? "animate-flip" : ""
             }`}>
             {flip ? latter : null}

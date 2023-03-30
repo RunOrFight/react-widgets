@@ -1,11 +1,12 @@
 import React from "react";
-import { Button } from "../components";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
-        <header className='bg-neutral-500 h-16 text-4xl flex justify-between font-mono py-2 px-4'>
-            <div className='cursor-pointer'>←</div>
-            <div className='cursor-pointer'>→</div>
+        <header className='bg-sky-700 text-white flex justify-between font-thin py-2 px-4'>
+            <Link to='/react-widgets'>
+                <span className='text-4xl hover:underline'>Back</span>
+            </Link>
         </header>
     );
 };

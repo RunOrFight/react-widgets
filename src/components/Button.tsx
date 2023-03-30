@@ -5,7 +5,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button: FC<ButtonProps> = ({ children, variant, ...props }) => {
-    const bg = variant === "active" ? "bg-neutral-800" : "bg-neutral-600";
+    const bg = variant === "active" ? "bg-sky-800" : "bg-sky-600";
     return (
         <button
             className={`${bg} rounded-lg px-5 py-2 disabled:opacity-75`}

@@ -1,12 +1,22 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation, useParams } from "react-router-dom";
+import { FlightWidgetPage, TicTacToePage } from "../pages";
 import Header from "./Header";
 
 const Main = () => {
+    const widgets = {
+        flight: <FlightWidgetPage />,
+        ticTacToe: <TicTacToePage />
+    };
+
+    const { widget } = useParams();
+
     return (
-        <div className='h-screen flex flex-col'>
+        <div className='h-full flex flex-col'>
             <Header />
-            <Outlet />
+            <div className='h-full flex flex-col justify-center items-center '>
+                {widgets[widget as keyof typeof widgets]}
+            </div>
         </div>
     );
 };

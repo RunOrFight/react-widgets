@@ -7,3 +7,4 @@ export { default as DepartureTable } from "./DepartureTable";
 export { default as ArrivalTable } from "./ArrivalTable";
 export { default as Tabbar } from "./Tabbar";
 export { default as Button } from "./Button";
+export { default as Board } from "./Board";
